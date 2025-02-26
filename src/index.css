@@ -5,9 +5,9 @@
   }
 
   body {
-    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Gradiente morbido blu chiaro */
-    min-height: 100vh; /* Assicura che lo sfondo copra tutta l'altezza della viewport */
-    font-family: 'Arial', sans-serif; /* Font pulito e moderno */
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); 
+    min-height: 100vh; 
+    font-family: 'Arial', sans-serif;
   }
   .container{
     align-items: center;
@@ -44,6 +44,9 @@
     letter-spacing: 1px;
   }
   td {
+    color: #2b2b2b;
+    font-size: 1.1em; 
+    line-height: 1.5;
     border-left: 2px solid white;
     border-right: 2px solid white;
     background-color: #c6c0c065;
