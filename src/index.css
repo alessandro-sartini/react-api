@@ -1,0 +1,64 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Gradiente morbido blu chiaro */
+    min-height: 100vh; /* Assicura che lo sfondo copra tutta l'altezza della viewport */
+    font-family: 'Arial', sans-serif; /* Font pulito e moderno */
+  }
+  .container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    min-height: 100vh; 
+  }
+  table {
+    border-collapse: collapse; 
+    width: 80%;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 1em; 
+    overflow: hidden; 
+  }
+  td,th{
+    /* color: aqua; */
+    padding: 1em;
+    /* text-align: center; */
+
+    /* margin: 3em; */
+  }
+  th {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    
+    background-color: #4a90e2; 
+    color: white; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+  }
+  td {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    background-color: #c6c0c065;
+    color: black;
+  }
+  tfoot  td{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+
+    background-color: #4ae2b4; 
+    color: white; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+  }
+
+
+  
