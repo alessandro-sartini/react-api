@@ -1,16 +1,19 @@
 import { useEffect } from "react"
 import { useState } from "react"
-
+// import REACT_APP_API_URL from "../"
 function App() {
 
+  // const apiUrl= process.env.REACT_APP_API_URL
   const [getTitles, setTitles] = useState([])
   
   useEffect(fetchApiTitle,[])
 
+  const apiUrl = 'http://localhost:3000/api/posts/';
+
 
   function fetchApiTitle() {
     
-    fetch('http://localhost:3000/api/posts/')
+    fetch(apiUrl)
       .then((res) => res.json())
       .then(data => {
         
@@ -21,8 +24,27 @@ function App() {
       .catch(error => {
         console.error(error)
       })
+    
   }
   // fetchApiTitle()
+
+
+  const handleDelete = (idElemento) => {
+    
+    fetch(` ${apiUrl}/${idElemento}`, {
+      
+      method: 'DELETE'
+
+    }).then(
+
+      fetchApiTitle()
+
+    )
+
+  };
+
+
+
 
   return (
     <>
@@ -32,7 +54,14 @@ function App() {
             <tr>
 
                 {
-                  getTitles.map(e =><th key={e.id}>{e.title}</th>
+                getTitles.map(e => <th
+                  key={e.id}>
+                  {e.title}
+                  <button onClick={()=>handleDelete(e.id)} >
+                    
+                    x</button>
+                </th>
+                    
                   )
                 }
 
@@ -73,4 +102,3 @@ function App() {
 
 export default App
 
-9
